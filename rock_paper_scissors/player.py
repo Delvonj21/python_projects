@@ -11,7 +11,6 @@ class Player:
     def choose_move(self):
         if self.is_computer:
             choice = random.choice(Move.valid_moves)
-            print(f"{self.name} chose {choice}")
 
         else:
             while True:
@@ -22,7 +21,7 @@ class Player:
                     break
                 print("Invalid choice. Try again.")
 
-            self.move = Move(choice)
+        self.move = Move(choice)
 
     def __str__(self):
         return f"{self.name} chose {self.move}"
